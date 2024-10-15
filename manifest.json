@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "NetSuite UI Remover",
+  "version": "9.3",
+  "description": "Removes unnecessary UI elements in NetSuite and maximizes the space for search results.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.app.netsuite.com/app/common/search/searchresults.nl?*"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
